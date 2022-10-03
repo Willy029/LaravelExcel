@@ -32,3 +32,6 @@ Route::controller(PrestamoController::class)->group(function(){
     Route::get('dispositivos-export','export')->name('dispositivos.export');
     Route::post('dispositivos-import','import')->name('dispositivos.import');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
