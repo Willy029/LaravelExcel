@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PrestamoController;
+use App\Http\Controllers\MenuController;
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
 
@@ -35,3 +36,8 @@ Route::controller(PrestamoController::class)->group(function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/menu', [App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
+
+Route::controller(MenuController::class)->group(function(){
+    
+});
